@@ -1,0 +1,139 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0; /* Light gray fallback for browser */
+  padding: 40px;
+}
+
+/* Form Container with Background Image */
+form {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9), 
+      rgba(255, 255, 255, 0.9)
+    )
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  color: darkorange;
+  font-size: 1.8em;
+}
+.hotel-name {
+  text-align: center;
+  font-size: 2.8em;
+  color: blue;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+
+/* Fieldsets and Legends */
+fieldset {
+  border: 2px solid blue;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: green;
+}
+
+/* Form Layout */
+.double-input {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-input-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input-container label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: black;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 1em;
+  background-color: #fff;
+}
+
+/* Button Styling */
+button {
+  background-color: yellow;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: green;
+}
+
+/* Error Messages */
+.error {
+  color: red;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Summary Section */
+#summary {
+  background-color: peachpuff;
+  border-left: 6px solid #3498db;
+  padding: 15px;
+  font-size: 1.1em;
+  color: green;
+  border-radius: 8px;
+}
+/* Body with city background (full browser background) */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: 
+    url('city.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 40px;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Form Container with Hotel background (only inside form) */
+form {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
