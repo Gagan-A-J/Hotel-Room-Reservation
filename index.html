@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Reservation Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<form id="reservationForm">
+<h1 class="hotel-name">Partha Grand</h1>
+  <h1>Reserve a Hotel Room</h1>
+    <fieldset>
+      <legend>Personal Data</legend>
+      <div class="double-input">
+        <div class="form-input-container">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Jan" minlength="3" required />
+        </div>
+        <div class="form-input-container">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Kowalski" required />
+        </div>
+      </div>
+      <div class="double-input">
+        <div class="form-input-container">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="jan.kowalski@gmail.com" required />
+        </div>
+        <div class="form-input-container">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="0000000000" pattern="[0-9]{10}" required />
+        </div>
+      </div>
+      <div class="form-input-container">
+        <label for="relationship">Relationship Status</label>
+        <select id="relationship" name="relationship" required>
+          <option value="">-- Select Status --</option>
+          <option value="Married">Married</option>
+          <option value="Unmarried">Unmarried</option>
+        </select>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Room Details</legend>
+      <div class="double-input">
+        <div class="form-input-container">
+          <label for="hotelcity">City</label>
+          <select id="hotelcity" name="hotelcity" required>
+            <option value="">-- Select City --</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Delhi">Delhi</option>
+            <option value="chennai">chennai</option>
+            <option value="hyderbad">hyderbad</option>
+          </select>
+        </div>
+        <div class="form-input-container">
+          <label for="capacity">Guests</label>
+          <input type="number" id="capacity" name="capacity" value="1" min="1" max="100" required />
+        </div>
+      </div>
+      <div class="double-input">
+        <div class="form-input-container">
+          <label for="startdate">Start Date</label>
+          <input type="date" id="startdate" name="startdate" required />
+        </div>
+        <div class="form-input-container">
+          <label for="enddate">End Date</label>
+          <input type="date" id="enddate" name="enddate" required />
+        </div>
+      </div>
+      <div class="double-input">
+        <div class="form-input-container">
+          <label>Room Type</label>
+          <select id="roomType" required>
+            <option value="">-- Select Room Type --</option>
+            <option value="single">Single (₹700/night)</option>
+            <option value="double">Double (₹1400/night)</option>
+          </select>
+        </div>
+        <div class="form-input-container">
+          <label>AC Preference</label>
+          <select id="acPreference" required>
+            <option value="">-- Select AC Option --</option>
+            <option value="nonac">Non-AC (₹0)</option>
+            <option value="ac">AC (₹500/night)</option>
+          </select>
+        </div>
+        <div class="form-input-container">
+  <label for="roomsBooked">Number of Rooms</label>
+  <input type="number" id="roomsBooked" name="roomsBooked" value="1" min="1" max="100" required />
+      </div>
+      </div>
+      <p class="error" id="dateError"></p>
+    </fieldset>
+    
+<div id="summary" style="display: none; margin-top: 20px;"></div>
+    <button type="submit">Submit a Request</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
